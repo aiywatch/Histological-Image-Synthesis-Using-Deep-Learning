@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<center>
+    	<img src="{{ url_for('send_file', filename=mask) }}" alt="Mask" height="350" width="350">
+	</center>
+    <br />
+
+	<center>
+	    <img src="{{ url_for('send_file', filename=out1) }}" alt="Option1" height="350" width="350">
+	    <img src="{{ url_for('send_file', filename=out2) }}" alt="Option2" height="350" width="350">
+	</center>
+{% endblock %}

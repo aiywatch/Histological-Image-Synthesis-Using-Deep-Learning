@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- <h1>Histological Image Synthesis Using Deep Learning</h1> -->
+    <h2>Please upload your mask</h2>
+
+    <br>
+    <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}" >
+    	<div class="custom-file">
+	    <input class="custom-file-input" id="fileInput" type=file name=photo>
+	    <label class="custom-file-label" for="fileInput" id="filename">Choose file...</label>
+	    <div class="invalid-feedback">Example invalid custom file feedback</div>
+	    </div>
+	    <input type="submit" class="btn btn-primary">
+	</form>
+
+
+<script>
+document.getElementById('fileInput').onchange = function () {
+  document.getElementById('filename').innerHTML = this.files.item(0).name;
+};
+</script>
+
+{% endblock %}
+
